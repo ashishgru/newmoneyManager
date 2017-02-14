@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ashishrpa.moneymanager">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.ashishrpa.moneymanager.SplashscreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.ashishrpa.moneymanager.AddexpenseActivity" />
+        <activity android:name="com.example.ashishrpa.moneymanager.DatalistActivity" />
+        <activity android:name="com.example.ashishrpa.moneymanager.SearchanddeleteActivity" />
+        <activity android:name="com.example.ashishrpa.moneymanager.UpdateexpenseActivity" />
+        <activity android:name="com.example.ashishrpa.moneymanager.ReportsActivity" />
+        <activity android:name="com.example.ashishrpa.moneymanager.DailyreportsearchActivity" />
+        <activity android:name="com.example.ashishrpa.moneymanager.MonthlyreportsearchActivity" />
+        <activity android:name="com.example.ashishrpa.moneymanager.WeeklyreportsearchActivity" />
+        <activity android:name="com.example.ashishrpa.moneymanager.MainActivity" />
+        <activity android:name="com.example.ashishrpa.moneymanager.AddincomeActivity" />
+
+        <receiver android:name="layout.MoneyManager">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/money_manager_info" />
+        </receiver>
+
+        <activity android:name="com.example.ashishrpa.moneymanager.YearlyreportsearchActivity"></activity>
+    </application>
+
+</manifest>
